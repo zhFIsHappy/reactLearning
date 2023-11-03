@@ -1,29 +1,17 @@
-import './App.css';
+import styles from './App.css';
 
 function App() {
-  const name = <h1>Frank</h1>;
-  const age = <h2>23</h2>
-  const email= <h2>zhfan13413@gamil.com</h2>
+  const age = 19;
+  const isGreen = true;
   return (
     
     <div className="App">
-      <User name = "Frank" age = {21} email = "zhfan@jdja.com" />
-      <User name = "Jake" age = {29} email = "jake@jdja.com"/>
+      {age >= 18 ? <h1>over age</h1> : <h1>under age</h1>}
+      <h1 style={{color: isGreen ? "green" : "red"}}>This has color</h1>
+      {isGreen && <button>This is a Button</button>}
     </div>
   );
 }
 
-const getName = () =>{
-  return "Frank"
-}
 
-const User =(props) =>{
-  return (
-  <div>
-    <h1>{props.name}</h1>
-    <h1>{props.age}</h1>
-    <h1>{props.email}</h1>
-    </div>
-    )
-}
 export default App;

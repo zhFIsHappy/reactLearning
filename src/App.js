@@ -1,14 +1,22 @@
 import styles from './App.css';
 
 function App() {
-  const age = 19;
-  const isGreen = true;
+
+  const planets = [
+    {name : "Mars", isGasPlanet : false},
+    {name : "Earth", isGasPlanet : false},
+    {name : "Jupiter", isGasPlanet : true},
+    {name : "Venus", isGasPlanet : false},   
+  ]
   return (
     
     <div className="App">
-      {age >= 18 ? <h1>over age</h1> : <h1>under age</h1>}
-      <h1 style={{color: isGreen ? "green" : "red"}}>This has color</h1>
-      {isGreen && <button>This is a Button</button>}
+       {/* 这里使用 planet 这个variable 访问map的 */}
+       {/* 两种方式 */}
+      {planets.map((planet, key) =>{
+        // if(planet.isGasPlanet)return <h1 key = {key}> {planet.name}</h1>;
+        return <h1 key = {key}> {planet.isGasPlanet ? planet.name : ""}</h1>;
+      })}
     </div>
   );
 }

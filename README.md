@@ -1,3 +1,7 @@
 # React Learning from Scratch
-## Nov 3
-### Overall sturcture of React project, JSX, Component, Props
+# 8 hrs in total from Youtube
+## Nov 3 to Nov 15
+## How to read this project
+### Each branch is a chapter/quiz/project
+
+
